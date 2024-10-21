@@ -164,7 +164,7 @@ Volumes are used for persistent database storage.
 
 ## Docker Image
 
-A Docker image for this application has also been created and is available on Docker Hub. You need to add this line to dockercompose file in app service:
+A Docker image for this application has also been created and is available on Docker Hub(`https://hub.docker.com/r/chitrank229/assignment-nm-app`). You need to add this line to dockercompose file in app service:
 
-    ```bash
+   ```bash
     image: chitrank229/assignment-nm-app
