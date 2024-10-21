@@ -1,0 +1,45 @@
+version: '3.9'
+
+services:
+  postgres:
+    image: postgres:14-alpine
+    ports:
+      - 5432:5432
+    volumes:
+      - ~/apps/postgres:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=ad323sad#
+      - POSTGRES_USER=chitrank_user
+      - POSTGRES_DB=nm_db
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U chitrank_user -d nm_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    networks:
+      - mynetwork
+  
+  app:
+    build: .
+    ports:
+      - '3000:3000'
+    environment:
+      DB_HOST: postgres
+      DB_USERNAME: chitrank_user
+      DB_PASSWORD: ad323sad#
+      DB_NAME: nm_db
+      DB_PORT: 5432
+      JWT_SECRET: mysecretkey
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - mynetwork
+
+volumes:
+  pgdata:
+
+networks:
+  mynetwork:
+    driver: bridge
+
