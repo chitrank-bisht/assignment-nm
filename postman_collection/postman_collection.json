@@ -1,0 +1,732 @@
+{
+	"info": {
+		"_postman_id": "bf2adc0d-2dde-4e51-b63c-0663d41f4bd0",
+		"name": "NamahaOM Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36291629"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "GetallUsers",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{admin_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/admin/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"admin",
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GetallUsers",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/admin/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"admin",
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "964"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3c4-sYVscp5U2Sb43VNXlFFZTlyC/dA\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 20 Oct 2024 12:49:10 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"users\": [\n        {\n            \"id\": 4,\n            \"email\": \"cadfagh123@gmail.com\",\n            \"name\": \"abhinav negi\",\n            \"password\": \"$2a$10$K7/n39kjWJTWmLmT8c5v8eDKRpPAjx0lRh0fzFswVEtXwqc/CQE6i\",\n            \"role\": \"admin\",\n            \"createdAt\": \"2024-10-20T05:58:52.687Z\",\n            \"updatedAt\": \"2024-10-20T05:58:52.687Z\"\n        },\n        {\n            \"id\": 6,\n            \"email\": \"ck265@gmail.com\",\n            \"name\": \"Chitrank Bisht\",\n            \"password\": \"$2a$10$yfmv7FnvB7znmwbZc7T9ke4TyDqRbyjk1IQ16BpORfzzgeXjJdKjq\",\n            \"role\": \"user\",\n            \"createdAt\": \"2024-10-20T06:56:34.911Z\",\n            \"updatedAt\": \"2024-10-20T06:56:34.911Z\"\n        },\n        {\n            \"id\": 2,\n            \"email\": \"sam34567@gmail.com\",\n            \"name\": \"Sam Curran\",\n            \"password\": \"$2a$10$lBhM6iF1WonmF5X5mgo1heEfPFxdwuSvi0Ze2ZHz.FQnuWIXH4RYK\",\n            \"role\": \"user\",\n            \"createdAt\": \"2024-10-20T05:42:21.634Z\",\n            \"updatedAt\": \"2024-10-20T07:07:46.542Z\"\n        },\n        {\n            \"id\": 7,\n            \"email\": \"chitrank.bisht@gmail.com\",\n            \"name\": \"Chitrank Bisht\",\n            \"password\": \"$2a$10$kj9R/fjatjmYrU.9LdzNv.Ado9GxO/G9AzRovCqkNC6HIFLfGEUza\",\n            \"role\": \"user\",\n            \"createdAt\": \"2024-10-20T07:13:30.019Z\",\n            \"updatedAt\": \"2024-10-20T07:13:30.019Z\"\n        }\n    ],\n    \"total\": 4,\n    \"currentPage\": 1,\n    \"totalPages\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "CreateNewUser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{admin_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Chitrank Bisht\",\r\n    \"email\":\"ck264@gmail.com\",\r\n    \"password\":\"abcd@1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/admin/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"admin",
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "CreateNewUser",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"Chitrank Bisht\",\r\n    \"email\":\"ck264@gmail.com\",\r\n    \"password\":\"abcd@1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/admin/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"admin",
+										"users"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "271"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"10f-AHXazHm3fQb6mFl8h7nG2KLmo/M\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 20 Oct 2024 12:50:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User created successfully\",\n    \"user\": {\n        \"email\": \"ck264@gmail.com\",\n        \"name\": \"Chitrank Bisht\",\n        \"password\": \"$2a$10$20SqvkYMwhkYc4Aw92Vhbuq3KRnyasOOnotoGqS61Mgg6tSwDocri\",\n        \"role\": \"user\",\n        \"id\": 9,\n        \"createdAt\": \"2024-10-20T07:20:00.190Z\",\n        \"updatedAt\": \"2024-10-20T07:20:00.190Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "UpdateUserDetails",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{admin_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Sam Curran\",\r\n    \"email\":\"sam34567@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/admin/users/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"admin",
+								"users",
+								"2"
+							]
+						},
+						"description": "### Update User Details\n\nThis endpoint allows the admin to update the details of a specific user.\n\n#### Request Body\n\n- **name** (string): The new name for the user.\n    \n- **email** (string): The new email for the user.\n    \n\n#### Response\n\nThe response will be in JSON format with the following schema:\n\n``` json\n{\n    \"type\": \"object\",\n    \"properties\": {\n        \"message\": {\n            \"type\": \"string\"\n        },\n        \"user\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"id\": {\n                    \"type\": \"integer\"\n                },\n                \"email\": {\n                    \"type\": \"string\"\n                },\n                \"name\": {\n                    \"type\": \"string\"\n                },\n                \"password\": {\n                    \"type\": \"string\"\n                },\n                \"role\": {\n                    \"type\": \"string\"\n                },\n                \"createdAt\": {\n                    \"type\": \"string\"\n                },\n                \"updatedAt\": {\n                    \"type\": \"string\"\n                }\n            }\n        }\n    }\n}\n\n ```\n\n#### Example Response\n\n``` json\n{\n    \"message\": \"\",\n    \"user\": {\n        \"id\": 0,\n        \"email\": \"\",\n        \"name\": \"\",\n        \"password\": \"\",\n        \"role\": \"\",\n        \"createdAt\": \"\",\n        \"updatedAt\": \"\"\n    }\n}\n\n ```"
+					},
+					"response": [
+						{
+							"name": "Updated User Details",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"Sam Curran\",\r\n    \"email\":\"sam34567@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/admin/users/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"admin",
+										"users",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "270"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"10e-Nw8t3rsLDHDTMROM86nHxJFhQnA\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 20 Oct 2024 12:37:46 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User updated successfully\",\n    \"user\": {\n        \"id\": 2,\n        \"email\": \"sam34567@gmail.com\",\n        \"name\": \"Sam Curran\",\n        \"password\": \"$2a$10$lBhM6iF1WonmF5X5mgo1heEfPFxdwuSvi0Ze2ZHz.FQnuWIXH4RYK\",\n        \"role\": \"user\",\n        \"createdAt\": \"2024-10-20T05:42:21.634Z\",\n        \"updatedAt\": \"2024-10-20T07:07:46.542Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "DeleteUser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{admin_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/admin/users/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"admin",
+								"users",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Deleted a User",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/admin/users/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"admin",
+										"users",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "39"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"27-27o4zzUjhHNmthTJyia4gBCjpos\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 20 Oct 2024 12:45:04 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User deleted successfully\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "UserRegister",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Chitrank Bisht\",\r\n    \"email\":\"chitrank.bisht@gmail.com\",\r\n    \"password\":\"abcd@1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Created a New User",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"Chitrank Bisht\",\r\n    \"email\":\"chitrank.bisht@gmail.com\",\r\n    \"password\":\"abcd@1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "283"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"11b-RrxHJrPxoymQUvWFEtJd3zLbWwI\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 20 Oct 2024 12:43:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User registered successfully\",\n    \"user\": {\n        \"email\": \"chitrank.bisht@gmail.com\",\n        \"name\": \"Chitrank Bisht\",\n        \"password\": \"$2a$10$kj9R/fjatjmYrU.9LdzNv.Ado9GxO/G9AzRovCqkNC6HIFLfGEUza\",\n        \"id\": 7,\n        \"role\": \"user\",\n        \"createdAt\": \"2024-10-20T07:13:30.019Z\",\n        \"updatedAt\": \"2024-10-20T07:13:30.019Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "UserLogin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"chitrank.bisht@gmail.com\",\r\n    \"password\":\"abcd@1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "UserLogin",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"chitrank.bisht@gmail.com\",\r\n    \"password\":\"abcd@1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "202"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ca-kBiTEIZSh56FGqBY8LG95+0oHII\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 20 Oct 2024 12:47:20 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Login successful\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjcsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzI5NDI4NDQwLCJleHAiOjE3Mjk0MzIwNDB9.Y8K31c0BsjBvOd5Hc3d68rIEPQ8tjAJUgHY6q9E3yFE\"\n}"
+						}
+					]
+				},
+				{
+					"name": "GetUserProfile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{user_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"profile"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get User Profile",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/profile",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"profile"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "102"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"66-y26/uwbDZqt+JzCrBJjsFbOp/sA\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 20 Oct 2024 12:48:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"Chitrank Bisht\",\n    \"email\": \"chitrank.bisht@gmail.com\",\n    \"registeredAt\": \"2024-10-20T07:13:30.019Z\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}

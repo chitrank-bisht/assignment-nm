@@ -87,7 +87,7 @@ This is a user and admin management system built with **Node.js**, **Express**, 
 
     ```bash
     npm run build
-    
+
 
 - Start the application:
 
@@ -125,6 +125,25 @@ This will compile TypeScript files and restart the server automatically.
 - **PUT `/users/:id`**: Update the authenticated user's profile (Admin only).
 - **DELETE `/users/:id`**: Delete a user (Admin only).
 
+## Postman Collection
+
+A Postman collection is provided to facilitate testing of the API endpoints. You can import the collection into Postman to quickly get started with testing the available routes.
+
+### How to Import the Collection
+
+1. Download the Postman collection from the [postman](./postman_collection) directory in this repository.
+2. Open Postman.
+3. Click on the "Import" button located at the top left corner.
+4. Select the downloaded JSON file and click "Open."
+5. The collection will be added to your Postman workspace.
+
+### Collection Overview
+
+The collection includes requests with examples for:
+- User registration
+- User login
+- Fetching user profiles
+- Admin user management
 
 ## Middleware
 
@@ -142,3 +161,10 @@ The application is Dockerized for easy setup and deployment. The docker-compose.
     docker-compose up --build
 
 Volumes are used for persistent database storage.
+
+## Docker Image
+
+A Docker image for this application has also been created and is available on Docker Hub. You need to add this line to dockercompose file in app service:
+
+    ```bash
+    image: chitrank229/assignment-nm-app
